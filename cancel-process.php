@@ -43,12 +43,12 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'ashikrojanvaikom@gmail.com'; // Your Gmail
-    $mail->Password = 'seec mcwh afrt vayn'; 
-    $mail->SMTPSecure = 'tls';
+    $mail->Username = ''; // Your Gmail
+    $mail->Password = ''; 
+    $mail->SMTPSecure = '';
     $mail->Port = 587;
 
-    $mail->setFrom('ashikrojanvaikom@gmail.com', 'Eventify');
+    $mail->setFrom('', 'Eventify');
     $mail->addAddress($data['email']);
     $mail->isHTML(true);
     $mail->Subject = 'Your Booking Has Been Cancelled';
@@ -64,3 +64,4 @@ try {
 
 header("Location: dashboard-router.php?cancel=success");
 exit;
+
