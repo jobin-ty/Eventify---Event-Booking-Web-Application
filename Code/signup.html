@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - Eventify</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat%20Alternates:700|Montserrat%20Alternates:400" rel="stylesheet" />
+    <link rel="stylesheet" href="signup-styles.css" />
+</head>
+<body>
+  <div class="signup-page">
+    <h1>Create Your Account</h1>
+    <form id="signupForm" action="signup.php" method="POST" autocomplete="off">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your full name" required autocomplete="name" />
+
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Create a password" required autocomplete="new-password" />
+
+      <fieldset class="account-type">
+        <legend>Account Type</legend>
+        <label><input type="radio" name="accountType" value="ticket_booker" required /> Ticket Booker</label>
+        <label><input type="radio" name="accountType" value="event_organizer" /> Event Organizer</label>
+
+      </fieldset>
+
+      <button type="submit" class="btn">
+        Sign Up <span class="arrow">→</span>
+      </button>
+    </form>
+    <div class="footer-link" onclick="window.location.href='login.html'">Already have an account? Login </div>
+  </div>
+
+</body>
+</html>
